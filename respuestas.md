@@ -1,1 +1,10 @@
-- db.restaurants.find({cuisine: "American"})
+- db.restaurants.count ({cuisine: "American"})
+- db.restaurants.count ({borough: "Queens"})
+- db.restaurants.count ({name: "Cafe Espanol"})
+- db.restaurants.count ({"name": {$regex: "Cafe"}})
+- db.restaurants.count ({"address.building": "41"})
+- db.restaurants.count({$or: [{"address.building" : "41"}, {"address.building" : "66"}]})
+- db.movies.count({"year":{$lte: 1917}})
+- db.movies.find({},{"title":1,_id:0})
+- db.movies.find({},{"title":1,_id:0}{"year":{$lte: 1917})
+- 
